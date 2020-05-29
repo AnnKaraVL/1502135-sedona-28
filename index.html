@@ -29,15 +29,14 @@
 	<h1>Sedona</h1>
 
 	<section>
-    <h2>Приветствие</h2>
-    <h3>Добро пожаловать!</h3>
-    <p>
-    <img src="img/intro-welcome.svg" width="457" height="351" alt="Welcome to the georgious Sedona">
-    </p>
+    <h2 class="visually-hidden">Добро пожаловать!</h2>
+    <div>
+     <img src="img/intro-welcome.svg" width="457" height="351" alt="Welcome to the georgious Sedona">
+    </div>
   <section>
 
   <section>
-   	<h2>Преимущества</h2>
+   	<h2 class="visually-hidden">Преимущества</h2>
    	<p>
    		Седона - небольшой городок в Аризоне,<br>
    		заслуживающий большего!
@@ -94,7 +93,7 @@
   </section>
 
   <section>
-    <h2>Прочие ништяки</h2>
+    <h2 class="visually-hidden">Прочие ништяки</h2>
     <ul>
       <li>
         <h3>Жильё</h3>
@@ -121,7 +120,7 @@
   </section>
 
   <section>
-   	<h2>Бронирование</h2>
+   	<h2 class="visually-hidden">Бронирование</h2>
    	<p>Заинтересовались?</p>
    	<p>
    		Укажите предполагаемы даты поездки,<br>
@@ -130,16 +129,39 @@
   </section>
 
   <section>
-    <h2>Где мы находимся</h2>
-    <img src="img/map.png" width="1199" height="594" alt="Карта Седоны">
+    <h2 class="visually-hidden">Где мы находимся</h2>
+    <img src="img/map.png" width="1199" height="594" alt="Седона на карте">
   </section>
 
 </main>
 
+<section>
+  <h2>Поиск гостиницы в Седоне</h2>
+  <form action="https://echo.htmlacademy.ru" method="post">
+    <div>
+      <label for="check-in-date">Дата заезда:</label>
+      <input id="check-in-date" type="text" name="check-in" placeholder="24 апреля 2017">
+    </div>
+    <div>
+      <label for="check-out-date">Дата выезда:</label>
+      <input id="check-out-date" type="text" name="check-out" placeholder="4 июля 2017">
+    </div>
+    <div>
+      <label for="number-of-adults">Взрослые:</label>
+      <input id="number-of-adults" type="text" name="adults" placeholder="2">
+    </div>
+    <div>
+      <label for="number-of-children">Дети:</label>
+      <input id="number-of-children" type="text" name="children" placeholder="0">
+    </div>
+  <button type="submit">Найти</button>
+  </form>
+</section>
+
 <footer>
 
 	<section>
-   	<h2>Контактная информация</h2>
+   	<h2 class="visually-hidden">Контактная информация</h2>
     <p>
     	#Visitsedona<br>
 			Тел: +7(495)666-01-66
@@ -147,7 +169,7 @@
 	</section>
 
 	<section>
-		<h2>Мы в соцсетях</h2>
+		<h2 class="visually-hidden">Мы в соцсетях</h2>
 			<ul>
 				<li><a href="#">Twitter</a></li>
 				<li><a href="#">Facebook</a></li>
@@ -163,12 +185,6 @@
 	</p>
 		
 </footer>
-
-<section>
-	<h2>Поиск гостиницы в Седоне</h2>
-	<!-- Здесь будет форма поиска -->
-	<button type="button">Найти</button>
-</section>
 
 </body>
 </html>
