@@ -385,17 +385,32 @@ input.number-of-adults {
 	list-style: none;
 }
 
-.social-button-twitter {
+.social-button {
 	width: 46px;
 	height: 48px;
 	background-color: var(--basic-blue-light);
+}
+
+.social-button-twitter {
 	background-image: url(img/twitter.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
-.social-button-twitter:hover,
-.social-button-twitter:focus {
+.social-button-facebook {
+	background-image: url(img/fb.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.social-button-youtube {
+	background-image: url(img/youtube.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.social-button:hover,
+.social-button:focus {
 	background-color: var(--basic-blue);
 }
 
@@ -405,39 +420,12 @@ input.number-of-adults {
 	background-size: 17px 17px;
 }
 
-.social-button-facebook {
-	width: 46px;
-	height: 48px;
-	background-color: var(--basic-blue-light);
-	background-image: url(img/fb.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.social-button-facebook:hover,
-.social-button-facebook:focus {
-	background-color: var(--basic-blue);
-}
-
 .social-button-facebook:active {
 	background-color: var(--basic-blue-dark);
 	background-image: url(img/fb-opacity.svg);
 	background-size: 12px 22px;
 }
 
-.social-button-youtube {
-	width: 46px;
-	height: 48px;
-	background-color: var(--basic-blue-light);
-	background-image: url(img/youtube.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.social-button-youtube:hover,
-.social-button-youtube:focus {
-	background-color: var(--basic-blue);
-}
 
 .social-button-youtube:active {
 	background-color: var(--basic-blue-dark);
@@ -453,6 +441,8 @@ input.number-of-adults {
 .footer-copyright a svg:active #logo-htmlacademy {
 	fill: var(--special-grey-logo);
 }
+
+/* HOTELS */
 
 /* Filter */
 
