@@ -61,6 +61,7 @@ hr {
 }
 
 .content-container {
+	position: relative;
 	width: 1200px;
 	background-color: var(--basic-white);
 	box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
@@ -337,6 +338,7 @@ html {
 	background-color: var(--basic-brown-light);
 	border: none;
 	outline: none;
+	padding: 0;
 }
 
 .search-form-button:hover,
@@ -352,37 +354,47 @@ html {
 	opacity: 0.3;
 }
 
+/* Map */
+
 .map {
-	max-height: 594px;
+	background-image: url("img/map.png");
+	background-repeat: no-repeat;
+	background-size: 1200px 594px;
 }
 
 /* Footer */
 
 .page-footer {
-	display: grid;
-  	grid-template-columns: 73px 351px 352px 351px 73px;
+	min-width: 1200px;
+  	display: grid;
+  	grid-template-columns: 58px 361px 362px 361px 58px;
+  	justify-content: center;
+  	align-items: center;
 	background-color: rgba(255, 255, 255, 0.9);
 	min-height: 120px;
+	margin: 0 auto;
 }
 
 .footer-contacts {
 	grid-column: 2/3;
 	font-size: 21px;
+	line-height: 35px;
 	font-weight: 700;
-	padding-top: 25px;
+	color: var(--basic-black);
 	text-align: center;
+	margin-bottom: 15px;
 }
 
 .footer-social ul {
 	grid-column: 3/4;
 	display: flex;
+	flex-wrap: wrap;
   	align-items: center;
   	justify-content: space-between;
-	width: 150px;
+	max-width: 150px;
 	list-style: none;
 	padding: 0;
 	margin: 0 auto;
-	padding-top:  36px;
 }
 
 .social-button {
@@ -392,6 +404,10 @@ html {
 	width: 46px;
 	height: 48px;
 	background-color: var(--basic-blue-light);
+}
+
+.social-button svg {
+	padding-top: 5px;
 }
 
 .social-button:hover,
@@ -408,6 +424,7 @@ html {
 }
 
 .footer-copyright {
+	color: var(--basic-black);
 	grid-column: 4/5;
 	display: flex;
 	align-items: center;
@@ -415,7 +432,7 @@ html {
 }
 
 .footer-copyright a {
-	margin-left: 10px;
+	margin-left: 8px;
 }
 
 
@@ -431,6 +448,12 @@ html {
 /* Modal */
 
 .modal {
+	position: absolute;
+	top: 2167px;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	margin: auto;
 	width: 568px;
 	background-color: var(--basic-white);
 	box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
@@ -561,7 +584,7 @@ input.number-of-children {
 	right: 89px;
 	width: 12px;
 	height: 3px;
-	z-index: 1;
+	z-index: 10;
 }
 
 .button-number-minus:hover rect,
@@ -732,11 +755,11 @@ label input:checked:disabled + span {
 
 .price-block p {
 	display: inline-block;
-	padding-top: 7px;
+	padding-top: 5px;
 }
 
 .p1 {
-	padding-left: 52px;
+	padding-left: 65px;
 }
 
 .p2 {
@@ -800,9 +823,9 @@ label input:checked:disabled + span {
 }
 
 .search-result ul {
-	width: 250px;
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -817,6 +840,7 @@ label input:checked:disabled + span {
 	line-height: 18px;
 	text-decoration: none;
 	border-bottom: 1px dotted rgba(129, 179, 210, 1);
+	margin-right: 32px;
 }
 
 .search-result a:hover,
@@ -914,14 +938,22 @@ label input:checked:disabled + span {
 .description-item {
 	display: grid;
 	grid-template-columns: 73px 163px 1fr 127px 73px;
+	align-content: center;
+	margin-top: 28px;
+	margin-bottom: 29px;
 }
 
 .image-block {
 	grid-column: 2/3;
+	width: 135px;
+	height: 90px;
+	object-fit: contain;
+	background-color: var(--basic-grey-light);
 }
 
 .text-block {
 	grid-column: 3/4;
+	margin-top: -5px;
 }
 
 .rating-block {
@@ -929,25 +961,20 @@ label input:checked:disabled + span {
 	justify-self: end;
 }
 
-.description-item {
-	margin-top: 27px;
-	margin-bottom: 27px;
-}
-
 .amara-price {
-	margin-left: 38px;
+	margin-left: 35px;
 }
 
 .desert-price {
-	margin-left: 64px;
+	margin-left: 60px;
 }
 
 .villas-price {
-	margin-left: 23px;
+	margin-left: 19px;
 }
 
 .description-buttons {
-	margin-top: 13px;
+	margin-top: 17px;
 }
 
 .booking-button {
@@ -985,7 +1012,7 @@ label input:checked:disabled + span {
 	color: var(--special-grey-rating);
 	background-color: var(--basic-grey-light);
 	text-align: center;
-	padding-top: 5px;
+	padding-top: 3px;
 }
 
 .four-stars {
