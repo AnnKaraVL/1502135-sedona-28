@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Седона - Гостиницы</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="normalize.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -15,19 +15,19 @@
 <header class="main-header">
   
   <div class="main-header-logo-container">
-   <a href="index.html" class="main-header-logo">
+    <a href="index.html" class="main-header-logo">
       <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Седона">
     </a>
   </div>
 
   <nav class="main-navigation">
     <div class="main-navigation-wrapper">
-     <ul  class="site-navigation">
+      <ul  class="site-navigation">
         <li class="nav-info"><a href="#">Информация</a></li>
         <li class="nav-foto"><a href="#">Фото и видео</a></li>
         <li class="nav-map"><a href="#">Карта штата</a></li>
         <li class="nav-hotels" style="color: var(--basic-brown-light);">Гостиницы</li>
-     </ul>
+      </ul>
     </div>
   </nav>
 
@@ -42,22 +42,22 @@
         <legend>Инфраструктура:</legend>
         <ul class="checkbox-group">
           <li class="checkbox-pool">
-          <label for="filter-pool">
-            <input class="visually-hidden" type="checkbox" name="pool" id="filter-pool" checked>
-            <span>Бассейн</span>
-          </label>
+            <label for="filter-pool">
+              <input class="visually-hidden" type="checkbox" name="pool" id="filter-pool" checked>
+              <span>Бассейн</span>
+            </label>
           </li>
           <li class="checkbox-parking">
-          <label for="filter-parking">
-            <input class="visually-hidden" type="checkbox" name="parking" id="filter-parking">
-            <span>Парковка</span>
-          </label>
+            <label for="filter-parking">
+              <input class="visually-hidden" type="checkbox" name="parking" id="filter-parking">
+              <span>Парковка</span>
+            </label>
           </li>
           <li class="checkbox-wi-fi">
-          <label for="filter-wi-fi">
-            <input class="visually-hidden" type="checkbox" name="wi-fi" id="filter-wi-fi">
-            <span>Wi-fi</span>
-          </label>
+            <label for="filter-wi-fi">
+              <input class="visually-hidden" type="checkbox" name="wi-fi" id="filter-wi-fi">
+              <span>Wi-fi</span>
+            </label>
           </li>
         </ul>
       </fieldset>
@@ -65,22 +65,22 @@
         <legend>Тип жилья:</legend>
         <ul>
           <li class="checkbox-hotel">
-          <label for="filter-hotel">
-            <input class="visually-hidden" type="checkbox" name="hotel" id="filter-hotel" checked>
-            <span>Гостиница</span>
-          </label>
+            <label for="filter-hotel">
+              <input class="visually-hidden" type="checkbox" name="hotel" id="filter-hotel" checked>
+              <span>Гостиница</span>
+            </label>
           </li>
           <li class="checkbox-motel">
-          <label for="filter-motel">
-            <input class="visually-hidden" type="checkbox" name="motel" id="filter-motel" checked>
-            <span>Мотель</span>
-          </label>
+            <label for="filter-motel">
+              <input class="visually-hidden" type="checkbox" name="motel" id="filter-motel" checked>
+              <span>Мотель</span>
+            </label>
           </li>
           <li class="checkbox-apartments">
-          <label for="filter-apartments">
-            <input class="visually-hidden" type="checkbox" name="apartments" id="filter-apartments" checked>
-            <span>Апартаменты</span>
-          </label>
+            <label for="filter-apartments">
+              <input class="visually-hidden" type="checkbox" name="apartments" id="filter-apartments" checked>
+              <span>Апартаменты</span>
+            </label>
           </li>
         </ul>
       </fieldset>
@@ -98,8 +98,7 @@
           <div class="toggle toggle-max"></div>
         </div>
         <button class="filter-button-submit" type="submit">Показать</button>
-      </fieldset>
-      
+      </fieldset>  
     </form>  
   </section>
 
@@ -108,21 +107,19 @@
     <p>Найдено: 3</p>
     <h3>Сортировка:</h3>
     <ul>
-      <li class="search-result-sorting"><a style="color: var(--basic-blue-light); text-decoration: none; opacity: 1; border: none;" href="#">По цене</a></li>
-      <li class="search-result-sorting"><a href="#">По типу</a></li>
-      <li class="search-result-sorting"><a href="#">По рейтингу</a></li>
+      <li><button type="button" class="sort-button sort-button-blue">По цене</button></li>
+      <li><button type="button" class="sort-button">По типу</button></li>
+      <li><button type="button" class="sort-button">По рейтингу</button></li>
     </ul>
-    <div class="search-result-buttons">
-      <button class="result-button button-up" type="button">
+    <div class="search-result-scroll-buttons">
+      <button class="scroll-button" type="button">
         <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/></svg>
       </button>
-      <button class="result-button button-down" type="button">
+      <button class="scroll-button" type="button">
         <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L0 0H11" fill="#81B3D2"/></svg>
       </button>
     </div>
   </section>
-
-  <hr>
  
   <section class="description-block">
     <h2 class="visually-hidden">Описание найденных гостиниц</h2>
@@ -145,7 +142,6 @@
             <p class="rating">Рейтинг: 8,5</p>
           </div>
         </li>
-        <hr>
         <li class="description-item">
           <div class="image-block">
             <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
@@ -164,7 +160,6 @@
            <p class="rating">Рейтинг: 8,9</p>
           </div>
         </li>
-        <hr>
         <li class="description-item">
           <div class="image-block">
             <img src="img/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
@@ -183,7 +178,6 @@
             <p class="rating">Рейтинг: 9,2</p>
           </div>
         </li>
-        <hr>
       </ul>
   </section>
 
@@ -194,7 +188,7 @@
   <section class="footer-contacts">
     <h2 class="visually-hidden">Контактная информация</h2>
     <p>#Visitsedona</p>
-    <p>Тел: +7(495) 666-01-66</p>
+    <p><a href="tel:+74956660166">Тел: +7(495) 666-01-66</a></p>
   </section>
 
  <section class="footer-social">
