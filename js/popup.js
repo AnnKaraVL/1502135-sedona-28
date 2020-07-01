@@ -5,19 +5,20 @@ var checkinDate = document.querySelector(".check-in-date");
 var checkoutDate = document.querySelector(".check-out-date");
 var adults = document.querySelector(".number-of-adults");
 var children = document.querySelector(".number-of-children");
-var input = document.querySelectorAll("input");
-
 
 button.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modal.classList.toggle('modal-hide');
-  modal.classList.toggle('modal-show');
-  modal.classList.remove("modal-error");
+evt.preventDefault();
+modal.classList.toggle("modal-hide");
+modal.classList.toggle("modal-show"); 
 });
 
 form.addEventListener("submit", function (evt) {
-	if (!checkinDate.value || !checkoutDate.value || !adults.value || !children.value) {
-		evt.preventDefault();
-		modal.classList.add("modal-error");
-	} 
+if (!checkinDate.value || !checkoutDate.value || !adults.value || !children.value) {
+evt.preventDefault();
+modal.classList.add("modal-error");
+} 
+const refresh = function() { 
+modal.classList.remove("modal-error"); }
+setTimeout(refresh, 500)
 });
+

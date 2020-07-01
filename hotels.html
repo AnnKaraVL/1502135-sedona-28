@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Седона - Гостиницы</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize-min.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -42,15 +42,15 @@
         <legend>Инфраструктура:</legend>
         <ul class="checkbox-group">
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="pool" id="filter-pool" checked>
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="pool" id="filter-pool" tabindex="0" checked>
             <label for="filter-pool">Бассейн</label> 
           </li>
           <li class="filter-option filter-checkbox">            
-            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking" tabindex="0">
             <label for="filter-parking">Парковка</label>           
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wi-fi" id="filter-wi-fi">
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wi-fi" id="filter-wi-fi" tabindex="0">
             <label for="filter-wi-fi">Wi-fi</label>        
           </li>
         </ul>
@@ -59,15 +59,15 @@
         <legend>Тип жилья:</legend>
         <ul>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" checked>
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" tabindex="0" checked>
             <label for="filter-hotel">Гостиница</label>          
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel" id="filter-motel" checked>
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel" id="filter-motel" tabindex="0" checked>
             <label for="filter-motel">Мотель</label>        
           </li>
           <li class="filter-option filter-checkbox">
-            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartments" id="filter-apartments" checked>
+            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartments" id="filter-apartments" tabindex="0" checked>
             <label for="filter-apartments">Апартаменты</label>
           </li>
         </ul>
@@ -75,8 +75,8 @@
       <fieldset class="price-block">
        <legend>Стоимость в сутки (р):</legend>
         <div class="price-controls">
-          <label class="min-price" for="min-price"> от </label><input id="min-price" type="number" name="min-price" value="0" onfocus="(this.value='')">
-          <label class="max-price" for="max-price"> до </label><input  id="max-price" type="number" name="max-price" value="3000" onfocus="(this.value='')">
+          <label class="min-price" for="min-price"> от </label><input class="min-price" id="min-price" type="number" name="min-price" placeholder="0" onfocus="(this.placeholder='')">
+          <label class="max-price" for="max-price"> до </label><input class="max-price"  id="max-price" type="number" name="max-price" placeholder="3000" onfocus="(this.placeholder='')">
         </div>
         <div class="range-controls">
           <div class="scale">
@@ -94,19 +94,23 @@
     <h2 class="visually-hidden">Результаты поиска</h2>
     <p>Найдено: 3</p>
     <h3>Сортировка:</h3>
-    <ul>
+    <ul class="sort-links">
       <li><a href="#" class="sort-link active">По цене</a></li>
       <li><a href="#" class="sort-link">По типу</a></li>
       <li><a href="#" class="sort-link">По рейтингу</a></li>
     </ul>
-    <div class="scroll-sort-links">
-      <a href="#" class="scroll-sort-link-item">
-        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/></svg>
-      </a>
-      <a href="#" class="scroll-sort-link-item">
-        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L0 0H11" fill="#81B3D2"/></svg>
-      </a>
-    </div>
+    <ul class="scroll-sort-links">
+      <li>
+        <a href="#">
+          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active-svg">
+          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L0 0H11" fill="#CACACA"/></svg>
+        </a>
+      </li>
+    </ul>
   </section>
  
   <section class="description-block">
