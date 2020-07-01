@@ -511,6 +511,11 @@ input[type="radio"].visually-hidden {
 	margin-left: 8px;
 }
 
+.footer-copyright .cls-1 {
+	fill: #231f20;
+	fill-rule: evenodd;
+}
+
 .footer-copyright a:focus {
 	outline: none;
 }
@@ -520,7 +525,7 @@ input[type="radio"].visually-hidden {
 	fill: var(--basic-blue-light);
 }
 
-.footer-copyright a path:active {
+.footer-copyright a:active path {
 	fill: var(--special-grey-logo);
 }
 
