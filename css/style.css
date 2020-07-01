@@ -535,7 +535,6 @@ input[type="radio"].visually-hidden {
 .modal {
 	position: absolute;
 	top: 100%;
-	bottom: auto;
 	right: 0;
 	left: 0;
 	margin: auto;
