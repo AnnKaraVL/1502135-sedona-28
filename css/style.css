@@ -200,7 +200,7 @@ input[type="radio"].visually-hidden {
   line-height: 26px;
   font-weight: 700;
   margin: 0 auto;
-  padding-top: 43px;
+  padding-top: 45px;
 }
 
 .features h4 {
@@ -214,7 +214,7 @@ input[type="radio"].visually-hidden {
 .features .preview {
   margin: 0;
   padding-top: 47px;
-  padding-bottom: 55px;
+  padding-bottom: 52px;
 }
 
 .features ul {
@@ -228,12 +228,12 @@ input[type="radio"].visually-hidden {
 }
 
 .features p.item-description {
-  max-width: 330px;
+  max-width: 320px;
   margin: 0 auto;
-  padding-top: 23px;
-  padding-bottom: 54px;
-  padding-right: 35px;
-  padding-left: 35px;
+  padding-top: 25px;
+  padding-bottom: 55px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .features-list-pictured {
@@ -258,12 +258,21 @@ input[type="radio"].visually-hidden {
 
 .features-list-pictured h4 {
   color: var(--basic-white);
-  padding-top: 47px;
+  padding-top: 44px;
   padding-bottom: 27px;
 }
 
 .features-list-pictured .feature-item-image {
   max-height: 256px;
+}
+
+.special-padding h4 {
+  padding-top: 50px;
+}
+
+.special-padding p.item-description {
+  padding-top: 20px;
+  padding-bottom: 54px;
 }
 
 .features-list-pictured li:first-child {
@@ -286,14 +295,15 @@ input[type="radio"].visually-hidden {
 }
 
 .features-list-additional h4 {
-  padding-top: 160px;
+  padding-top: 157px;
 }
 
 .features-list-additional p.item-description {
-  padding-bottom: 81px;
   max-width: 304px;
+  padding-bottom: 84px;
   padding-left: 48px;
   padding-right: 48px;
+  padding-top: 26px;
 }
 
 .features-list-additional li {
@@ -378,7 +388,7 @@ input[type="radio"].visually-hidden {
 .booking p {
   margin: 0;
   padding-top: 30px;
-  padding-bottom: 45px;
+  padding-bottom: 42px;
 }
 
 .booking h3 {
@@ -457,7 +467,7 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   color: var(--basic-black);
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .footer-contacts a {
@@ -533,7 +543,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   padding-right: 15px;
 }
 
@@ -620,15 +630,16 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form-item input[type="number"]::-webkit-outer-spin-button,
-.search-form-item input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.search-form-item input[type="date"]::-webkit-calendar-picker-indicator,
+.search-form-item input[type="number"]::-webkit-inner-spin-button,
 .search-form-item input[type="date"]::-webkit-outer-spin-button,
 .search-form-item input[type="date"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.search-form-item input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   margin: 0;
 }
@@ -641,6 +652,10 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
+.search-form-item input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
 .search-form-item label.check-in-date-label {
   margin-right: 19px;
 }
@@ -650,11 +665,11 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form-item label.number-of-adults-label {
-  margin-right: 36px;
+  margin-right: 40px;
 }
 
 .search-form-item label.number-of-children-label {
-  margin-right: 23px;
+  margin-right: 27px;
 }
 
 .search-form-item input {
@@ -664,6 +679,7 @@ input[type="radio"].visually-hidden {
   border: none;
   outline: none;
   padding: 0;
+  height: 38px;
 }
 
 .search-form-item input:hover {
@@ -680,7 +696,6 @@ input[type="radio"].visually-hidden {
 .search-form input.check-out-date {
   position: relative;
   width: 346px;
-  height: 38px;
   padding: 0;
   padding-left: 12px;
   margin-bottom: 29px;
@@ -714,33 +729,43 @@ input[type="radio"].visually-hidden {
   fill: var(--basic-blue-light);
 }
 
-.search-form input.number-of-adults,
-.search-form input.number-of-children {
-  position: relative;
+.search-form-item-guests {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.search-form-tem-container {
   width: 114px;
   height: 38px;
+  background-color: var(--basic-grey-light);
+}
+
+.search-form-item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-form input.number-of-adults,
+.search-form input.number-of-children {
+  width: 38px;
   text-align: center;
 }
 
+.button-number-minus,
 .button-number-plus {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
+  flex-shrink: 0;
   width: 38px;
   height: 38px;
-  cursor: pointer;
-}
-
-.button-number-minus {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 80px;
-  cursor: pointer;
-  width: 38px;
-  height: 38px;
-  z-index: 10;
+  border: none;
+  outline: none;
+  background-color: var(--basic-grey-light);
+  padding: 0;
 }
 
 .button-number-plus::after,
@@ -753,11 +778,6 @@ input[type="radio"].visually-hidden {
   width: 12px;
   height: 3px;
   background: var(--special-grey-icon);
-}
-
-.button-number-minus::after {
-  top: 20px;
-  left: 23px;
 }
 
 .button-number-plus::before {
@@ -795,7 +815,7 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-blue-light);
   border: none;
   outline: none;
-  margin-top: 54px;
+  margin-top: 55px;
   margin-bottom: 55px;
   padding: 17px 0;
 }
@@ -882,6 +902,10 @@ input[type="radio"].visually-hidden {
 .filter input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.filter input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 .filter fieldset {
@@ -1292,10 +1316,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  padding-top: 30px;
-  padding-bottom: 29px;
-  padding-left: 73px;
-  padding-right: 73px;
+  padding: 30px 73px;
   border-bottom: 1px solid var(--special-grey-stroke);
 }
 
@@ -1384,7 +1405,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/star.svg");
   background-repeat: space;
   margin-left: 19px;
-  margin-bottom: 44px;
+  margin-bottom: 42px;
 }
 
 .three-stars {
@@ -1393,7 +1414,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/star.svg");
   background-repeat: space;
   margin-left: 44px;
-  margin-bottom: 44px;
+  margin-bottom: 42px;
 }
 
 .two-stars {
@@ -1402,5 +1423,5 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/star.svg");
   background-repeat: space;
   margin-left: 69px;
-  margin-bottom: 44px;
+  margin-bottom: 42px;
 }
